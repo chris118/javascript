@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .root {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="root" class="root">
+    </div>
+</body>
+<script type="text/javascript">
+    runTimer ()
+    runTimeout()
+
+    function runTimer (){
+        let i = 0
+        let timer = setInterval(function () {
+            console.log("runTimer")
+            var root = document.getElementById("root")
+            root.innerHTML = i
+
+            i++
+            if(i === 100000){
+                console.log("clear runTimer")
+                clearInterval(timer)
+                return
+            }
+        }, 10)
+    }
+
+    let j = 0
+    function runTimeout() {
+        let timeout = setTimeout(function (){
+        console.log("runTimeout")
+
+        j++
+      }, 2000)
+    }
+</script>
+</html>

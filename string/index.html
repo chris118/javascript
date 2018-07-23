@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .root {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="root" class="root">
+    </div>
+</body>
+<script type="text/javascript">
+
+    //模板字面量
+   let total = 25
+   let message = `total: ${total}`
+   console.log(message)
+
+   //小数保留2位
+   let f = 0.2345678
+    let f_format = `f_format: ${f.toFixed(2)}`
+   console.log(f_format)
+</script>
+</html>
